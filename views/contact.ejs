@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TRADITIONAL HANDICRAFTS WEBSITE</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body background="image/bg1.jpg">
+        <%- include('base') -%> 
+    <section class="contact-section section" id="contact">
+        <h1 class="heading"> contact <span>us</span> </h1>
+    
+        <div class="container">
+            <div class="row">
+                <div class="contact-item">
+                    <div class="contact-item-inner outer-shadow">
+                        <i class="fas fa-phone"></i>
+                        <span>Phone</span>
+                        <p>6281010199</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-inner outer-shadow">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                        <p>chasusavas@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-inner outer-shadow">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Address</span>
+                        <p>7-15-35,Duvvada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact-form">
+                    <form action="mailto:ambicathakasi@gmail.com" method="post" enctype="text/plain">
+                        <div class="row">
+                            <div class="w-50">
+                                <div class="input-group outer-shadow hover-in-shadow">
+                                    <input type="text" name="name" placeholder="Name" class="input-control" required>
+                                </div>
+                                <div class="input-group outer-shadow hover-in-shadow">
+                                    <input type="text" name="email" placeholder="E-mail" class="input-control" required>
+                                </div>
+                                <div class="input-group outer-shadow hover-in-shadow">
+                                    <input type="text" name="subject" placeholder="Subject" class="input-control" required>
+                                </div>
+                            </div>
+                            <div class="w-50">
+                              <div class="input-group outer-shadow hover-in-shadow">
+                                  <textarea class="input-control" name="message" placeholder="Message" required></textarea>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="submit-btn">
+                                <div class="text-center"><input type="submit" class="btn bg-gradient btn btn-outline-secondary bg-opacity-25 submit"></div>
+                                <!-- <button type="submit" name="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <!-- <h3> groco <i class="fas fa-shopping-basket"></i> </h3> -->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, saepe.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +916281010199 </a>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> chasusavas@gmail.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Duvvada, india - 400104 </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="index.html" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="features.html" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+            <a href="products.html" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+            <a href="review.html" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="contact.html" class="links"> <i class="fas fa-arrow-right"></i>contact</a>
+        </div>
+
+        <!--<div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <input type="email" placeholder="your email" class="email">
+            <input type="submit" value="subscribe" class="btn">
+            <img src="image/payment.png" class="payment-img" alt="">
+        </div>-->
+
+    </div>
+
+    <!-- <div class="credit"> created by <span> mr. web designer </span> | all rights reserved </div> -->
+
+</section>
+        <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+        <!-- https://script.google.com/macros/s/AKfycbzqhrFEBgaUSEB8OjpCsO91euEb_3QfhaULEOfVR_2G0vYPtrUza1zFJVHhT2HM_O4/exec -->
+        <script>
+            let url="https://script.google.com/macros/s/AKfycby3FwWuMJUY0CtTqol13UVVUn4dInSeAMdTV-5PPAyl_Tyk7KMyv6tFuhvjAo3-KCw/exec";
+            let form=document.querySelector("form");
+            let submit=document.querySelector(".submit");
+            let subject=document.querySelector(".subject");
+            let message=document.querySelector(".message");
+            form.addEventListener('submit',(e)=>{
+                    e.preventDefault();
+                    submit.value="submitting..."
+                    fetch(url,{method:"POST",body: new FormData(form)})
+                    .then(res=>res.text())
+                    .then(data=>{
+                         message.innerHTML=data;
+                        submit.value="Sent"
+                    })
+                    .catch(err=>{
+                        message.innerHTML=err; 
+                        submit.value="Sent"
+                    })
+            })
+          </script>
+    <script src="script.js"></script>
+    </body>
+</html>

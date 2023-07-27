@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bamboo</title>
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.html">
+</head>
+
+<body background="image/bg1.jpg">
+        
+    <%- include('base') -%> 
+<br><br>
+</br>
+</br>
+    <section class="features" id="features">
+
+        <h1 class="heading"> <span>Bamboo</span> </h1>    
+        <div class="box-container">
+            <% data.forEach(x => { %>  
+            <div class="row">
+                <div class="card-item" data-id="25">
+                     <img src="<%= x.image %>" alt="">
+                     <div class="details">
+                <h3><%= x.name %></h3>
+                <p>
+                <span class="price"><%= x.price %></span>
+                <!-- <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div> -->
+                </p>    <span class="add-to-cart-btn">Add To Cart</span>
+
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+                <div class="card-item" data-id="26">
+                    <img src="image/lamp1.jpg" alt="">
+                    <div class="details">
+                    <h3>Lamp Cover</h3>
+                    <p>
+                    <span class="price">Price: Rs.150</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    </p>
+                    <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+                <div class="card-item" data-id="27">
+                    <img src="image/decor.jpg" alt="">
+                    <div class="details">
+                    <h3>Decor Bag</h3>
+                    <p>
+                    <span class="price">Price: Rs.199</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    </p>
+                    <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+                <div class="card-item" data-id="28">
+                    <img src="image/box.jpg" alt="">
+                    <div class="details">
+                    <h3>Storage Box</h3>
+                    <p>
+                    <span class="price">Price: Rs.149</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                 </p>
+                 <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+            </div>
+    
+        </div>
+       <br></br>
+        <div class="box-container">
+            <div class="row">
+                <div class="card-item" data-id="29">
+                     <img src="image/bambooo2.jpg" alt="">
+                     <div class="details">
+                                                 <h3>Bullock-cart</h3>
+                <p>
+                     <span class="price">Price: Rs.200</span>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                        </p>
+                        <span class="add-to-cart-btn">Add To Cart</span>
+
+                    </div>
+                </div>
+            </div>
+                <div class="card-item" data-id="30">
+                    <img src="image/bambooo3.jpeg" alt="">
+                    <div class="details">
+                    <h3>Mini Home</h3>
+                    <p>
+                    <span class="price">Price: Rs.250</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    </p>
+                    <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+                <div class="card-item" data-id="31">
+                    <img src="image/bambooo4.jpg" alt="">
+                    <div class="details">
+                    <h3>Hand Fan</h3>
+                    <p>
+                    <span class="price">Price: Rs.99</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </p>
+                <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+                <div class="card-item" data-id="32">
+                    <img src="image/bamboo2.webp" alt="">
+                    <div class="details">
+                    <h3>Fruit Holder</h3>
+                    <p>
+                    <span class="price">Price: Rs.98</span>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    </p>
+                    <span class="add-to-cart-btn">Add To Cart</span>
+
+                </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    
+    </section>
+    
+    
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+    </body>
+</html>

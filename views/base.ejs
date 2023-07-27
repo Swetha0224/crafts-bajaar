@@ -1,0 +1,72 @@
+<!-- similar to jinja template -->
+
+
+<header class="header" >
+    <a href="#" class="logo"><i class="fas fa-shopping-basket"></i> Crafts Store </a>
+    <nav class="navbar">
+        <a href="/">home</a>
+        <a href="/products">products</a>
+        <a href="/features">features</a>
+        <a href="/review">review</a>
+        <a href="/contact">contact</a>
+    </nav>
+
+    <div class="icons navbar">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <div class="fas fa-search" id="search-btn"></div>
+        
+        <% var main_data=n %>
+        <% var Currentuser=JSON.parse(localStorage.getItem(n)) %>
+
+        <% if(Currentuser==null) { %>
+        <!-- <div  class="fas fa-cart-arrow-down fa-2x" id="cart-btn"></div> -->
+        <a href="/login"><div  class="fas fa-user" id="login-btn"></div></a>
+        <% } %> 
+
+
+        <% if(Currentuser!=null) { %>
+        
+
+            <div  class="fas fa-cart-arrow-down fa-2x" id="cart-btn"></div>
+            <a href="/user"><%= Currentuser.name %></a>
+            <a href="/logout">Logout</a>
+            <% } %> 
+
+        
+
+  </div>
+    
+    <form action="" class="search-form">
+        <input type="search" id="search-box" placeholder="search here....">
+        <label for="search-box" class="fas fa-search"></label>
+    </form>
+    
+    <div class="cart-box">
+       
+        <div class="whole-cart-window hide">
+          <h2>Shopping Bag</h2>
+          <div class="cart-wrapper">
+          
+          </div> 
+          <div class="subtotal">Subtotal: Rs.0.00</div>
+          <div class="checkout">Checkout</div>
+          <div class="view-cart">View Cart</div>
+        </div>
+    </div>
+
+   
+   <!-- <form action="/" class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" oninvalid="alert('Please enter valid email!..');" required>
+        <input type="password" placeholder="your password" class="box" oninvalid="alert('Please enter valid password!..');" required>
+        <input type="submit" value="submit"  class="btn" onclick="openPopup()">
+        <div class="popup" id="popup">
+        <img src="image/tick.webp" alt="">
+        <h2>Thank You!</h2>
+        <p>You has been login successfully.Thanks!</p>
+        <button type="reset"  onclick="close1Popup()">OK</button>
+        <button type="reset"  onclick="closePopup()">Logout</button>
+        </div>
+    </form> -->
+    
+    </header>
